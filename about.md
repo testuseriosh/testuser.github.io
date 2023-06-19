@@ -1,11 +1,10 @@
 ---
 title: About
 permalink: "/about"
-layout: default
+layout: page
 Test:
 - Option 1
 - Option 2
-layout: page
 ---
 
 # This is a test
