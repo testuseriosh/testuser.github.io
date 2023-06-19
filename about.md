@@ -1,6 +1,9 @@
 ---
 title: About
 permalink: "/about"
+Test:
+- Option 1
+- Option 2
 layout: page
 ---
 
