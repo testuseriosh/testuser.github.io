@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Brand Book
 permalink: "/about"
 layout: default
 ---
