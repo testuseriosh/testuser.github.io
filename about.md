@@ -9,4 +9,4 @@ layout: page
 
 # This is a test
 
-Testing 123 test
+![Wellbeing_2.mp4](/uploads/Wellbeing_2.mp4)
