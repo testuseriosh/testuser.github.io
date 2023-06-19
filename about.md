@@ -9,4 +9,6 @@ layout: page
 
 # This is a test
 
-![Wellbeing_2.mp4](/uploads/Wellbeing_2.mp4)
+<video controls width="250">
+    <source src="/uploads/Wellbeing_2.mp4" type="video/mp4">
+</video>
