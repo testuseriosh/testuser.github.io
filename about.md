@@ -1,9 +1,7 @@
 ---
 title: About
 permalink: "/about"
-Test:
-- Option 1
-- Option 2
+Custom HTML: <div class="Test">HELLO WORLD!</div>
 layout: default
 ---
 
