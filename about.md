@@ -10,3 +10,5 @@ layout: default
 <video controls width="100%" loop>
     <source src="/uploads/Wellbeing_2.mp4" type="video/mp4">
 </video>
+
+{{page.Custom\ HTML}}
