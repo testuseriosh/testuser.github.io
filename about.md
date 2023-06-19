@@ -1,7 +1,7 @@
 ---
 title: About
 permalink: "/about"
-layout: page
+layout: default
 Test:
 - Option 1
 - Option 2
