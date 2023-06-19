@@ -1,7 +1,7 @@
 ---
 title: About
 permalink: "/about"
-Custom HTML: <div class="Test">HELLO WORLD!</div>
+Custom_HTML: <div class="Test">HELLO WORLD!</div>
 layout: default
 ---
 
@@ -11,4 +11,4 @@ layout: default
     <source src="/uploads/Wellbeing_2.mp4" type="video/mp4">
 </video>
 
-{{page.["Custom HTML"]}}
+{{page.Custom_HTML}}
