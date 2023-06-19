@@ -1,7 +1,7 @@
 ---
 title: About
 permalink: "/about"
-Custom_HTML: <div class="Test">HELLO WORLD!</div>
+Custom_HTML: <div class="bg-dark-blue white pa1">HELLO WORLD!</div>
 layout: default
 ---
 
