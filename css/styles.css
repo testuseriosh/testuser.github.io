@@ -9,5 +9,5 @@
 }
 
 .f5 {
-    font-size: --font-size-base;
+    font-size: var(--font-size-base);
 }
