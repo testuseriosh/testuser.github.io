@@ -1,6 +1,6 @@
 ---
 title: Octocat's homepage
-timezone: UTC
+timezone: Europe/London
 collections:
   posts:
     title: Posts
