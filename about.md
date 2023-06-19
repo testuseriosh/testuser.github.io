@@ -4,7 +4,7 @@ permalink: "/about"
 Test:
 - Option 1
 - Option 2
-layout: page
+layout: default
 ---
 
 # This is a test
