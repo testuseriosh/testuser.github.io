@@ -1,6 +1,7 @@
 ---
 title: Brand Book
 permalink: "/about"
+Custom HTML: "<div>This is custom HTML</div>"
 layout: default
 ---
 
