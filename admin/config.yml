@@ -2,9 +2,9 @@ backend:
   name: github
   repo: testuseriosh/testuseriosh.github.io # Path to your GitHub repository
   site_domain: lively-basbousa-32bcc1.netlify.app
-  # optional, defaults to master
-  # branch: main
-media_folder: '_uploads'
+  branch: master
+media_folder: "assets/img/posts" # Media files will be stored in the repo under images/uploads
+public_folder: "/assets/img/posts" # The src attribute for uploaded media will begin with /images/uploads
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
@@ -12,7 +12,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "---" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
