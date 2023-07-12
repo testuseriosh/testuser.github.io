@@ -1,4 +1,3 @@
-# _data/navigation.yml
 items:
   - name: Home
     link: /
@@ -6,5 +5,3 @@ items:
     link: /about.html
   - name: Blog
     link: /blog.html
-  - name: Staff
-    link: /staff.html
