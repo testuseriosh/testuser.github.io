@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   repo: testuseriosh/testuseriosh.github.io # Path to your GitHub repository
   # optional, defaults to master
   # branch: main
