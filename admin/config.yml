@@ -1,76 +1,48 @@
 backend:
   name: github
-  repo: testuseriosh/testuseriosh.github.io
+  repo: testuseriosh/testuseriosh.github.io # Path to your GitHub repository
   site_domain: lively-basbousa-32bcc1.netlify.app
   branch: main
-media_folder: _uploads
-public_folder: /uploads
+media_folder: "_uploads" # Media files will be stored in the repo under images/uploads
+public_folder: "/uploads" # The src attribute for uploaded media will begin with /images/uploads
 collections:
-  - name: blog
-    label: Blog
-    folder: _posts
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - label: Layout
-        name: layout
-        widget: hidden
-        default: default
-      - label: Author
-        name: author
-        widget: string
-      - label: Title
-        name: title
-        widget: string
-      - label: Publish Date
-        name: date
-        widget: datetime
-      - label: Category
-        name: category
-        widget: string
-        default: jekyll
-      - label: Summary
-        name: summary
-        widget: string
-      - label: Body
-        name: body
-        widget: markdown
-  - name: pages
-    label: Pages
-    editor: null
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Category", name: "category", widget: "string", default: "jekyll"}
+      - {label: "Summary", name: "summary", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: 'pages'
+    label: 'Pages'
+    editor:
     preview: false
     files:
-      - label: About Page
-        name: about
-        file: about.md
+      - label: 'About Page'
+        name: 'about'
+        file: 'about.md'
         fields:
-          - label: Title
-            name: title
-            widget: hidden
-            default: about
-          - label: Layout
-            name: layout
-            widget: hidden
-            default: about
-          - label: Body
-            name: body
-            widget: markdown
-  - name: config
-    label: Config
-    editor: null
+          - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'config'
+    label: 'Config'
+    editor:
     preview: false
     files:
-      - label: Navigation
-        name: navigation
-        file: _data/navigation.yml
+      - label: 'Navigation'
+        name: 'navigation'
+        file: '_data/navigation.yml'
         fields:
-          - label: Navigation Items
-            name: items
-            widget: list
-            fields:
-              - label: Name
-                name: name
-                widget: string
-              - label: Link
-                name: link
-                widget: string
+        - label: 'Navigation Items'
+          name: 'items'
+          widget: 'list'
+          fields:
+            - { label: Name, name: name, widget: string }
+            - { label: Link, name: link, widget: string }
