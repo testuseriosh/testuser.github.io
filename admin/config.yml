@@ -2,7 +2,7 @@ backend:
   name: github
   repo: testuseriosh/testuseriosh.github.io # Path to your GitHub repository
   site_domain: lively-basbousa-32bcc1.netlify.app
-  branch: master
+  branch: main
 media_folder: "_uploads" # Media files will be stored in the repo under images/uploads
 public_folder: "/uploads" # The src attribute for uploaded media will begin with /images/uploads
 collections:
