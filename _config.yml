@@ -3,9 +3,9 @@ title: Test Brand Book
 timezone: Europe/London
 collections:
   posts:
-    title: Posts
+    title: posts
     output: true
   uploads:
-    title: Uploads
+    title: uploads
     output: true
 description: Bookmark this to keep an eye on my project updates!
