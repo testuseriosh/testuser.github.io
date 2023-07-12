@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: testuseriosh/testuseriosh.github.io # Path to your GitHub repository
-  site_domain: https://lively-basbousa-32bcc1.netlify.app
+  site_domain: lively-basbousa-32bcc1.netlify.app
   # optional, defaults to master
   # branch: main
 media_folder: '_uploads'
