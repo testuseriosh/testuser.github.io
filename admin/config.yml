@@ -3,3 +3,10 @@ backend:
   repo: testuseriosh/testuseriosh.github.io # Path to your GitHub repository
   # optional, defaults to master
   # branch: main
+media_folder: '_uploads'
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: '_posts/'
+    fields:
+      - { name: Title }
