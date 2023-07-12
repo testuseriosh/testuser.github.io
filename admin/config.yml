@@ -42,9 +42,9 @@ collections:
         name: 'navigation'
         file: '_data/navigation.yml'
         fields:
-        - label: 'Navigation Items'
-          name: 'items'
-          widget: 'list'
-          fields:
-            - { label: Name, name: name, widget: string }
-            - { label: Link, name: link, widget: string }
+          - label: 'Navigation Items'
+            name: 'items'
+            widget: 'list'
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Link, name: link, widget: string }
