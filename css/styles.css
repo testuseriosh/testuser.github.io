@@ -11,3 +11,7 @@
 .f5 {
     font-size: var(--font-size-base);
 }
+
+.bg-primary {
+    background: #462170;
+}
