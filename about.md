@@ -1,6 +1,6 @@
 ---
 title: About
-permalink: "/about"
+permalink: /about
 Custom_HTML: |-
   <script>
   document.getElementById('autoplay').play();
@@ -8,8 +8,7 @@ Custom_HTML: |-
   <div class="bg-dark-blue white pa1">HELLO WORLD!</div>
 layout: default
 ---
-
-# This is a test
+# Now I can edit another page
 
 <video id="autoplay" width="100%" loop muted playsinline controls>
     <source src="/uploads/Wellbeing_2.mp4" type="video/mp4">
