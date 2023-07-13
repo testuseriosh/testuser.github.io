@@ -1,7 +1,7 @@
 <nav class="w-100 bg-primary pt2 pb2 white">
     <div class="measure-wide center">
     {% for item in site.data.navigation.items %}
-      <a href="{{ site.baseurl }}{{ item.link }}" class="white ph2" {% if page.url == item.link %}{% endif %}>
+      <a href="{{ site.baseurl }}{{ item.link }}" class="white ph2 no-underline" {% if page.url == item.link %}{% endif %}>
         {{ item.name }}
       </a>
     {% endfor %}
