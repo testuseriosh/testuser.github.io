@@ -26,6 +26,10 @@
     background-color: #2d58a6;
 }
 
+.bg-green {
+    background-color: #1f8201;
+}
+
 /* Page transitions */
 
 .transition-fade {
