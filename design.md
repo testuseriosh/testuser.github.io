@@ -5,6 +5,4 @@ layout: default
 ---
 ### Colours
 
-{% raw %}
-<div class="db bg-blue br-100"></div> Core Blue
-{% endraw %}
+<div class="db bg-blue br-100 w3 h3">Core Blue</div>
