@@ -11,7 +11,6 @@ layout: default
 <div class="db white mb2">Hex: #462170</div>
 <div class="db white">Pantone 3535 U</div>
 </div>
-Core purple
 
 <div class="dib bg-blue w-40 pa2 mr3 mb3 f6">
 <div class="db white mb2">CMYK: 100/0/0/0</div>
@@ -19,7 +18,6 @@ Core purple
 <div class="db white mb2">Hex: #009fe3</div>
 <div class="db white">Pantone 2995 U</div>
 </div>
-Core blue
 
 
 
@@ -32,7 +30,6 @@ Core blue
 <div class="db white mb2">Hex: #1f8201</div>
 <div class="db white">Pantone 2426 U</div>
 </div>
-C﻿ore green
 
 <div class="dib bg-blue w-40 pa2 mr3 mb3 f6">
 <div class="db white mb2">CMYK: 85/98/0/22</div>
@@ -40,4 +37,3 @@ C﻿ore green
 <div class="db white mb2">Hex: #462170</div>
 <div class="db white">Pantone 3535 U</div>
 </div>
-C﻿ore red
