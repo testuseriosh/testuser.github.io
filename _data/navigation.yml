@@ -3,5 +3,11 @@ items:
     link: /
   - name: About
     link: /about
+  - name: Design
+    link: /design
+  - name: Toolkits
+    link: /toolkits
+  - name: Legal
+    link: /legal
   - name: Blog
     link: /blog

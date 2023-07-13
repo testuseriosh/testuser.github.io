@@ -26,12 +26,40 @@ collections:
     editor:
       preview: false
     files:
-      - label: 'About Page'
+      - label: 'About'
         name: 'about'
         file: 'about.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
           - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Blog'
+        name: 'blog'
+        file: 'blog.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'hidden', default: 'blog' }
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'blog' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Design'
+        name: 'Design'
+        file: 'design.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'hidden', default: 'blog' }
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'blog' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Toolkits'
+        name: 'Toolkits'
+        file: 'toolkits.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'hidden', default: 'blog' }
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'blog' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Downloads'
+        name: 'Downloads'
+        file: 'downloads.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'hidden', default: 'blog' }
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'blog' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'config'
     label: 'Config'
