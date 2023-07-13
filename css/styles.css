@@ -40,3 +40,8 @@
 .system-sans-serif {
     font-family: 'Montserrat', sans-serif;
 }
+
+.full-width {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
