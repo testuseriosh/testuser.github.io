@@ -12,9 +12,21 @@
     font-size: var(--font-size-base);
 }
 
-.bg-primary {
-    background: #462170;
+/* Brand Colours */
+
+.bg-purple {
+    background-color: #462170;
 }
+
+.bg-red {
+    background-color: #e71d35;
+}
+
+.bg-blue {
+    background-color: #2d58a6;
+}
+
+/* Page transitions */
 
 .transition-fade {
     transition: 0.4s;
