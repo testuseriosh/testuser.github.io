@@ -3,8 +3,8 @@ title: Design
 permalink: /design
 layout: default
 ---
-### C﻿olours
+### Colours
 
-{﻿% raw %}
-<﻿div class="db bg-blue br-100"></div> Core Blue
-{﻿% endraw %}
+{% raw %}
+<div class="db bg-blue br-100"></div> Core Blue
+{% endraw %}
