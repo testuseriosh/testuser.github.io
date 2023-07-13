@@ -9,14 +9,14 @@ layout: default
 <div class="db white mb2">CMYK: 85/98/0/22</div>
 <div class="db white mb2">RGB: 70/33/112</div>
 <div class="db white mb2">Hex: #462170</div>
-<div class="db white mb2">Pantone 3535 U</div>
+<div class="db white">Pantone 3535 U</div>
 </div>
 
 <div class="dib bg-blue w-40 pa2 mr3 mb3 f6">
 <div class="db white mb2">CMYK: 85/98/0/22</div>
 <div class="db white mb2">RGB: 70/33/112</div>
 <div class="db white mb2">Hex: #462170</div>
-<div class="db white mb2">Pantone 3535 U</div>
+<div class="db white">Pantone 3535 U</div>
 </div>
 
 ### Core colours
@@ -25,12 +25,12 @@ layout: default
 <div class="db white mb2">CMYK: 85/98/0/22</div>
 <div class="db white mb2">RGB: 70/33/112</div>
 <div class="db white mb2">Hex: #462170</div>
-<div class="db white mb2">Pantone 3535 U</div>
+<div class="db white">Pantone 3535 U</div>
 </div>
 
 <div class="dib bg-blue w-40 pa2 mr3 mb3 f6">
 <div class="db white mb2">CMYK: 85/98/0/22</div>
 <div class="db white mb2">RGB: 70/33/112</div>
 <div class="db white mb2">Hex: #462170</div>
-<div class="db white mb2">Pantone 3535 U</div>
+<div class="db white">Pantone 3535 U</div>
 </div>
