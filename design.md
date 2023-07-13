@@ -3,7 +3,7 @@ title: Design
 permalink: /design
 layout: default
 ---
-### Colours
+### Corporate Colours
 
 <div class="dib bg-purple w-40 pa2 mr3 mb3">
 <div class="db white">CMYK: 85/98/0/22</div>
