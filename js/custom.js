@@ -1,5 +1,8 @@
 function init() {
-    // JS here
+
+  // JS here
+
+const element = getElementById('lottie');
 
     lottie.loadAnimation({
       container: element, // the dom element that will contain the animation
