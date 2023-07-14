@@ -2,7 +2,7 @@ function init() {
 
   // JS here
 
-const element = getElementById('lottie');
+const element = document.getElementById('lottie');
 
     lottie.loadAnimation({
       container: element, // the dom element that will contain the animation
