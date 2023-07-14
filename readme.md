@@ -2,4 +2,4 @@
 
 Is this secretly the homepage all along?
 
-<div id="lottie"></div>
+<a href="/design"><div id="lottie"></div></a>

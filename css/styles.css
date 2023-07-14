@@ -55,3 +55,13 @@
 main[tabindex="-1"] {
     outline: none;
   }
+
+  #lottie svg:hover g {
+    fill: red;
+    transition: 0.3s;
+    }
+    
+    #lottie:hover{
+    transform: rotate(10deg);
+    transition: 0.3s;
+    }
