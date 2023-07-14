@@ -9,7 +9,7 @@ const element = document.getElementById('lottie');
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      path: 'data.json' // the path to the animation json
+      path: 'data.json', // the path to the animation json
       rendererSettings: {
         title: 'Brand hub title', // Adds SVG title element for accessible animation title
         description: 'The words brand hub bouncing left and right.', // Adds SVG desc element for accessible long description of animation
