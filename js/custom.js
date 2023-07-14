@@ -2,7 +2,9 @@ function init() {
     // JS here
   }
   
-  const swup = new Swup();
+  const swup = new Swup(
+    plugins: [new SwupA11yPlugin(), new SwupPreloadPlugin()]
+  );
   
   // Run once when page loads
   if (document.readyState === 'complete') {
