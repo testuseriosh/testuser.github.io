@@ -56,6 +56,14 @@ main[tabindex="-1"] {
     outline: none;
   }
 
+  #lottie {
+    transition: 0.3s;
+  }
+
+  #lottie svg {
+    transition: 0.3s;
+  }
+
   #lottie svg:hover g {
     fill: red;
     transition: 0.3s;
