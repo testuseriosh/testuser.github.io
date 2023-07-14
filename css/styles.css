@@ -49,3 +49,9 @@
     width: 100vw;
     margin-left: calc(50% - 50vw);
 }
+
+/* SWUP */
+
+main[tabindex="-1"] {
+    outline: none;
+  }
