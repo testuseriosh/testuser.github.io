@@ -2,11 +2,11 @@ function init() {
 
   // JS here
 
-const element = document.getElementById('lottie');
-const source = element.dataset.source;
+var container = document.getElementById('lottie');
+var source = container.dataset.source;
 
-    lottie.loadAnimation({
-      container: element, // the dom element that will contain the animation
+ var anim =  lottie.loadAnimation({
+      container: container, // the dom element that will contain the animation
       renderer: 'svg',
       loop: true,
       autoplay: true,
@@ -17,6 +17,13 @@ const source = element.dataset.source;
         id: 'brand-hub',
       }
     });
+
+    container.addEventListener("mousemove", ev => {
+      var rect = container.getBoundingClientRect();
+      var t = (ev.clientX - rect.left) / rect.width;
+      anim.goToAndStop(t * json.op, true);
+  });
+
   }
   
   const swup = new Swup();
