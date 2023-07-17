@@ -19,6 +19,7 @@ var source = container.dataset.source;
     });
 
     animation.goToAndStop(14, true);
+    var state = 'pause';
 
     container.addEventListener('click', () => {
       if(state === 'play') {
