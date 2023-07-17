@@ -14,4 +14,6 @@ layout: default
     <source src="/uploads/Wellbeing_2.mp4" type="video/mp4">
 </video>
 
+<div id="lottie" data-source="advanced.json"></div>
+
 {{page.Custom_HTML}}
