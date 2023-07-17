@@ -5,11 +5,11 @@ function init() {
 var container = document.getElementById('lottie');
 var source = container.dataset.source;
 
- var anim =  lottie.loadAnimation({
+ var animation =  lottie.loadAnimation({
       container: container, // the dom element that will contain the animation
       renderer: 'svg',
       loop: true,
-      autoplay: true,
+      autoplay: false,
       path: source, // the path to the animation json
       rendererSettings: {
         title: 'Brand hub title', // Adds SVG title element for accessible animation title
@@ -18,11 +18,17 @@ var source = container.dataset.source;
       }
     });
 
-    container.addEventListener("mousemove", ev => {
-      var rect = container.getBoundingClientRect();
-      var t = (ev.clientX - rect.left) / rect.width;
-      anim.goToAndStop(t * json.op, true);
-  });
+    animation.goToAndStop(14, true);
+
+    container.addEventListener('click', () => {
+      if(state === 'play') {
+       animation.playSegments([14, 27], true);
+        state = 'pause';
+      } else {
+        animation.playSegments([0, 14], true);
+        state = 'play';
+      }
+    });
 
   }
   
