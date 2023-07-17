@@ -3,7 +3,7 @@ function init() {
   // JS here
 
 const element = document.getElementById('lottie');
-const source element.dataset.source;
+const source = element.dataset.source;
 
     lottie.loadAnimation({
       container: element, // the dom element that will contain the animation
