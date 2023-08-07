@@ -108,7 +108,7 @@ function isValidTinyUrl(str) {
    // canvasborder.setAttribute("x", canvasborderx + borderstroke);
    // canvasborder.setAttribute("y", canvasbordery + borderstroke);
     if (outputs == "svg") {
-        qrCode.download({ name: "qr", extension: "svg" });
+        qrCode.download({ name: qrname, extension: "svg" });
     }
     if (outputs == "png") {
         qrCode.download({ name: qrname, extension: "png" });
