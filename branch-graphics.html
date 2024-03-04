@@ -17,16 +17,32 @@
 			height: 640,
 			backgroundColor: "#462170",
 		});
-		fabric.Image.fromURL('/uploads/west-africa.png', (img) => {
+		switch(window.location.protocol) {
+   case 'http:':
+   case 'https:':
+     //remote file over http or https
+	 var imageprefix = 'https://testuseriosh.github.io/uploads'
+     break;
+   case 'file:':
+   var imageprefix = './_uploads'
+     break;
+   default: 
+     //some other protocol
+}
+		fabric.Image.fromURL(imageprefix + '/west-africa.png', (img) => {
 			// the scaleToHeight property is use to set the image height
-			img.scaleToHeight(150);
+			img.scaleToHeight(200);
 			// scaleToWidth is use to set the image width
-			img.scaleToWidth(150);
+			img.scaleToWidth(200);
             img.crossOrigin = "anonymous";
 			canvas.add(img)
 		}, {
 			top: 0,
-			left: 490
+			left: (640-200),
+			hasControls: false,
+			lockScalingX: true,
+			lockMovementY: true,
+			lockMovementX: true,
 		});
 		var text = new fabric.Textbox('Welcome to IOSH', {
 			left: 70,
