@@ -1,0 +1,166 @@
+<html>
+<head>
+	<title>Branch Graphics Generator</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css" integrity="sha512-d0v474klOFSF7qD9WDvyRxAvXaWSxCHDZdnBSZQjo8BpVr6vpjwAgqetpqkKP38DzlOzdVPaLVnzzW1Ba8wB9w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.3.0/fontfaceobserver.standalone.js" integrity="sha512-AtGkQVw5dVZR8URiScMJF/O46VB5I4JRo+wsLSwCKvtnlCwlWV/59excjg1+hFmuXuQhwYvoADflVbN4fMAKNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js" integrity="sha512-CeIsOAsgJnmevfCi2C7Zsyy6bQKi43utIjdA87Q0ZY84oDqnI0uwfM9+bKiIkI75lUeI00WG/+uJzOmuHlesMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script type="text/javascript">
+	var font = new FontFaceObserver('Inter');
+	var canvas = new fabric.Canvas('c');
+	// Define an array with all fonts
+	fonts = ['Inter'];
+	// Load all fonts using Font Face Observer
+	Promise.all(fonts.map(font => new FontFaceObserver(font).load())).then(function() {
+		// create a wrapper around native canvas element (with id="c")
+		var canvas = new fabric.Canvas('c', {
+			width: 640,
+			height: 640,
+			backgroundColor: "#462170",
+		});
+		fabric.Image.fromURL('https://link.assetfile.io/6ReljbRkKIdkCDQi7S0QzB/IOSH+white+logo.png', (img) => {
+			// the scaleToHeight property is use to set the image height
+			img.scaleToHeight(150);
+			// scaleToWidth is use to set the image width
+			img.scaleToWidth(150);
+            img.crossOrigin = "anonymous";
+			canvas.add(img)
+		}, {
+			top: 0,
+			left: 490
+		});
+		var text = new fabric.Textbox('Welcome to IOSH', {
+			left: 70,
+			top: 140,
+			bottom: 400,
+			width: 470,
+			fill: '#FFF',
+			fontSize: 50,
+			height: 200,
+			fontWeight: 800,
+			fontFamily: 'Inter',
+			hasControls: false,
+			lockScalingX: true,
+			lockMovementY: true,
+			lockMovementX: true,
+		});
+		text.on('changed', () => {
+			subtitle.top = (text.height + text.top + 20);
+		});
+		// Render the Textbox on Canvas 
+		canvas.add(text);
+		var subtitle = new fabric.Textbox('Your subtitle here', {
+			left: 70,
+			top: (text.height + text.top + 20),
+			bottom: 400,
+			width: 470,
+			fill: '#FFF',
+			fontSize: 30,
+			fontWeight: 400,
+			fontFamily: 'Inter',
+			hasControls: false,
+			lockScalingX: true,
+			lockMovementY: true,
+			lockMovementX: true,
+		});
+		// Render the Textbox on Canvas 
+		canvas.add(subtitle);
+		document.getElementById('download').onclick = function() {
+			const dataURL = canvas.toDataURL({
+				width: canvas.width,
+				height: canvas.height,
+				left: 0,
+				top: 0,
+				format: 'png',
+			});
+
+			const link = document.createElement('a');
+			link.download = 'image.png';
+			link.href = dataURL;
+			document.body.appendChild(link);
+			link.click();
+			document.body.removeChild(link);
+		};
+
+        var colorinputs = document.getElementsByName('clr');
+
+        var changeBackground = function() {
+        var clr = document.querySelector('input[name="clr"]:checked').value;
+        canvas.backgroundColor = clr;
+		canvas.renderAll();
+        }
+
+        for (var i = 0; i < colorinputs.length; i++) {
+            colorinputs[i].addEventListener('click', changeBackground, false);
+        }
+	});
+	</script>
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+	.inter-800 {
+		font-family: "Inter", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 800;
+		font-style: normal;
+		font-variation-settings:
+			"slnt"0;
+	}
+
+	.inter-400 {
+		font-family: "Inter", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+		font-variation-settings:
+			"slnt"0;
+	}
+
+	.canvas-container {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	button {
+		background-color: #462170;
+		cursor: pointer;
+	}
+
+	input[type="radio"]+label {
+		border: 1px solid white;
+	}
+
+	input[type="radio"]:checked+label {
+		border: 2px solid white;
+		-webkit-box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.41);
+		-moz-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.41);
+		box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.41);
+	}
+	</style>
+</head>
+
+<body class="inter-400">
+	<div class="measure-wide">
+		<div class="w-60 fr pa2">
+			<canvas id="c" width="640px" height="640px"></canvas>
+		</div>
+		<div class="w-40 pa2">
+			<h2> IOSH Social Media Generator</h2>
+			<div class="mb2">
+				<p class="w-100 db mb0">Color</p>
+				<input checked name="clr" class="br-100 dn" id="bp" type="radio" value="#462170"><label for="bp" style="background-color: #462170;" class="dib br-100 w1 h1"></label>
+				<input name="clr" class="br-100 dn" id="cb" type="radio" value="#009fe3"><label for="cb" style="background-color: #009fe3;" class="dib br-100 w1 h1"></label>
+				<input name="clr" class="br-100 dn" id="cg" type="radio" value="#1f8201"><label for="cg" style="background-color: #1f8201;" class="dib br-100 w1 h1"></label>
+				<input name="clr" class="br-100 dn" id="clp" type="radio" value="#7363b0"><label for="clp" style="background-color: #7363b0;" class="dib br-100 w1 h1"></label>
+				<input name="clr" class="br-100 dn" id="cdc" type="radio" value="#1c7db0"><label for="cdc" style="background-color: #1c7db0;" class="dib br-100 w1 h1"></label>
+				<input name="clr" class="br-100 dn" id="cbl" type="radio" value="#2d58a6"><label for="cbl" style="background-color: #2d58a6;" class="dib br-100 w1 h1"></label>
+				<input name="clr" class="br-100 dn" id="cdm" type="radio" value="#96257d"><label for="cdm" style="background-color: #96257d;" class="dib br-100 w1 h1"></label>
+				<input name="clr" class="br-100 dn" id="cdt" type="radio" value="#0e728c"><label for="cdt" style="background-color: #0e728c;" class="dib br-100 w1 h1"></label>
+			</div>
+			<div class="mb2">
+				<button id="download" class="white br-pill pv2 ph4 bn mb2">Download PNG</button>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
