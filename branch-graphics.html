@@ -108,6 +108,43 @@
         for (var i = 0; i < colorinputs.length; i++) {
             colorinputs[i].addEventListener('click', changeBackground, false);
         }
+
+document.getElementById('save').onclick = function() {
+	console.log("saving");
+    // convert canvas to a json string
+	localStorage.removeItem("bgsave");
+    var json = JSON.stringify( canvas.toJSON() );
+	localStorage.setItem("bgsave", json);
+}
+
+function lockElements() {
+	//do the iteration here
+	obj = canvas.getObjects();
+	console.log(obj);
+   obj.forEach(function(item, i) {
+      item.set({
+		hasControls: false,
+		lockScalingX: true,
+		lockMovementY: true,
+		lockMovementX: true});
+   });
+   canvas.renderAll();
+}
+
+
+document.getElementById('load').onclick = function() {
+console.log("loading");
+var json = 	localStorage.getItem("bgsave");
+// parse the data into the canvas
+canvas.clear();
+canvas.loadFromJSON(json, function() {
+	// We use the callback so the images are loaded
+	lockElements();
+});
+// re-render the canvas
+canvas.renderAll();
+}
+
 	});
 	</script>
 	<style>
@@ -162,7 +199,7 @@
 		<div class="w-40 pa2">
 			<h2> IOSH Social Media Generator</h2>
 			<div class="mb2">
-				<p class="w-100 db mb0">Color</p>
+				<p class="w-100 db mb1">Color</p>
 				<input checked name="clr" class="br-100 dn" id="bp" type="radio" value="#462170"><label for="bp" style="background-color: #462170;" class="dib br-100 w1 h1"></label>
 				<input name="clr" class="br-100 dn" id="cb" type="radio" value="#009fe3"><label for="cb" style="background-color: #009fe3;" class="dib br-100 w1 h1"></label>
 				<input name="clr" class="br-100 dn" id="cg" type="radio" value="#1f8201"><label for="cg" style="background-color: #1f8201;" class="dib br-100 w1 h1"></label>
@@ -173,7 +210,9 @@
 				<input name="clr" class="br-100 dn" id="cdt" type="radio" value="#0e728c"><label for="cdt" style="background-color: #0e728c;" class="dib br-100 w1 h1"></label>
 			</div>
 			<div class="mb2">
-				<button id="download" class="white br-pill pv2 ph4 bn mb2">Download PNG</button>
+				<button id="save" class="white br-pill pv2 ph4 bn mb2 w-100">Save</button>
+				<button id="load" class="white br-pill pv2 ph4 bn mb2 w-100">Load</button>
+				<button id="download" class="white br-pill pv2 ph4 bn mb2 w-100">Download PNG</button>
 			</div>
 		</div>
 	</div>
