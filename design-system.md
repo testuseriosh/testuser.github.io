@@ -1,5 +1,5 @@
 ---
-title: Design System
+title: Tabs
 permalink: /design-system
 layout: design-system-default
 ---

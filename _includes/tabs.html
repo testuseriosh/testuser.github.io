@@ -1,4 +1,4 @@
-<div class="border my-5 p-5">
+{% capture code %}
     <div class="max-w-content mx-auto mb-5" aria-hidden="true">
         <h2 class="font-heading text-3xl lg:text-4xl print-module-title">How CPD works</h2>
             <div class="max-w-content mx-auto">
@@ -78,4 +78,13 @@
         </div>
     </div>
     </div>
- </div>
+{% endcapture %}
+
+<div class="border my-5 p-10">
+    {{ code }}
+</div>
+<code>
+    <!-- {% raw %} -->
+    {{ code }}
+    <!-- {% endraw %} -->
+</code>
