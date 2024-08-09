@@ -8,6 +8,6 @@ layout: design-system-default
 
 This is a test don't worry about it.
 {% endcapture intro %}
-<div class="cms">{{ intro }}</div>
+<div class="cms">{{ intro | markdownify }}</div>
 
 {% include tabs.html %}
