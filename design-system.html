@@ -3,10 +3,10 @@ title: Design System
 permalink: /design-system
 layout: design-system-default
 ---
-{% capture intro %}
+{% capture intro %}>
 ## Testing 123
 
 This is a test don't worry about it.
 {% endcapture %}
-{{ intro | markdownify }}
+{{ intro | markdownify | prepend: "<div class=\"cms\">" | append: "</div>" }}
 {% include tabs.html %}
