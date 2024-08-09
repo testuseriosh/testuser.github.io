@@ -81,4 +81,6 @@
     </div>
     </div>
 {% endcapture %}
-{{ tabs | prepend: "</div>" | append: "<div class=\"cms\">" }}
+{% capture startdiv %}></div>{% endcapture %}
+{% capture enddiv %}><div class="cms">{% endcapture %}
+{{ tabs | prepend: startdiv | append: enddiv }}
