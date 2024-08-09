@@ -9,11 +9,11 @@
 </head>
 <body>
     <div class="bg-purple p-10 text-white font-bold"><span class="block max-w-content mx-auto">IOSH Design System</span></div>
-    <div class="flex">
+    <div class="flex max-w-content mx-auto">
     {% include ds-navigation.html %}
-    <main>
+    <main class="py-10">
         <div>
-        <h1>{{ page.title }}</h1> 
+        <h1 class="font-heading text-3xl w-full lg:text-4xl">{{ page.title }}</h1> 
         <section>
           {{ content }}
         </section>
