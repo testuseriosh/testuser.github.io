@@ -1,5 +1,5 @@
 <nav class="p-10">
-  <h2 class="text-2xl lg:text-3xl">Components</h2>
+  <h2 class="font-heading text-2xl lg:text-3xl">Components</h2>
   <ul>
   {% for item in site.data.ds-navigation.items %}
   <li><a href="{{ site.baseurl }}{{ item.link }}" {% if page.url == item.link %}{% endif %}>
