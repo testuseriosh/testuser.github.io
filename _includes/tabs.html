@@ -1,3 +1,4 @@
+{% capture tabs %}>
 <div class="border my-5 p-5">
     <div class="max-w-content mx-auto mb-5" aria-hidden="true">
         <h2 class="font-heading text-3xl lg:text-4xl print-module-title">How CPD works</h2>
@@ -79,3 +80,5 @@
     </div>
     </div>
     </div>
+{% endcapture %}
+{{ tabs | prepend: "</div>" | append: "<div class=\"cms\">" }}
