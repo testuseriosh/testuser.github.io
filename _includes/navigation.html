@@ -1,4 +1,4 @@
-<nav class="w-100 bg-purple pt4 pb4 white" data-swup-preload-all>
+<nav class="w-100 bg-purple pt4 pb4 white w-full max-w-64 " data-swup-preload-all>
     <div class="measure-wide center">
     {% for item in site.data.navigation.items %}
       <a href="{{ site.baseurl }}{{ item.link }}" class="white ph2 no-underline" {% if page.url == item.link %}{% endif %}>
