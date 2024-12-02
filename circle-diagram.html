@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IOSH Research Explorers</title>
+  <meta name="viewport" content="width=device-width,shrink-to-fit=no,initial-scale=1,minimum-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+   body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.slice {
+    transition: all 0.2s ease 0.1s;
+    cursor: pointer;
+}
+
+.slice:focus {
+    outline: none;
+    caret-color: transparent;
+}
+
+.slice:focus .focus-outline {
+stroke: orange;
+stroke-width: 6px;          
+}
+
+/* Using the :hover and :not() pseudo-class selectors */
+.slices:hover .slice:not(:hover) {
+    opacity: 0.25;
+}
+
+.slice-inner:hover {
+    cursor: pointer;
+    transform: translate(-15%, -15%) scale(1.3);
+}
+
+svg {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    caret-color: transparent;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        transform: translateY(100%) rotate(45deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    svg {
+        top: 0;
+        position: fixed;
+        max-width: 50%;
+    }
+}
+  </style>
+</head>
+<body>
+<div id="composition" class="md:flex max-w-screen-3xl mx-auto" x-data="{ screen: '1' }">
+    <div id="imagebox" class="w-full md:w-1/2 md:flex easeload fadein">
+    </div>
+    <div id="content" class="w-full md:w-1/2">
+        <div class="screens screen-1 top-0 px-8 md:px-0 md:absolute" x-show="screen === 1" x-transition.duration.500ms>
+        <div class="flex flex-wrap md:mr-16">
+        <div>
+        <h1 class="text-5xl font-bold mt-4 mb-8">OSH professionals</h1>
+        <p class="text-2xl mb-4">"We need to demonstrate competency through continuing professional development"</p>
+        <p>Credibility and resources</p>
+        </div>
+        <div class="md:w-1/2 px-2">
+        <h4 class="mt-5 text-2xl font-bold">Who we are</h4>
+        <p>Mix of those who are:</p>
+        <ul class="list-disc ml-5">
+            <li>IOSH members / non-members</li>
+            <li>In different career stages</li>
+            <li>In different membership grades (affiliate, technical, certified, chartered, chartered fellow)</li>
+            <li>Based in UK / international (130 countries)</li>
+            <li>Of various ages</li>
+        </ul>
+    </div>
+    <div class="md:w-1/2 px-2">
+        <h4 class="mt-5 text-2xl font-bold">What's important to us</h4>
+        <ul class="list-disc ml-5">
+            <li>Credibility</li>
+            <li>Demonstrating professionalism / our experience and knowledge</li>
+            <li>Progress professional journey to where we wish to</li>
+            <li>Leading and delivering good OSH</li>
+            <li>Receiving and providing support through mentorship, networks and guidance</li>
+            <li>CPD resources</li>
+        </ul></div>
+        <div class="md:w-1/2 px-2">
+        <h4 class="mt-5 text-2xl font-bold">Challenges and pain points</h4>
+        <ul class="list-disc ml-5">
+            <li>Developing knowledge around OSH</li>
+            <li>Supporting the development of others around good OSH</li>
+            <li>Delivering good OSH in the workplace</li>
+            <li>Raising the profile of OSH at a team or regional level</li>
+        </ul></div>
+        <div class="md:w-1/2 px-2"><h4 class="mt-5 text-2xl font-bold">Unmet needs</h4>
+        <ul class="list-disc ml-5">
+            <li>Understanding the true value of:
+                <ul class="list-disc ml-7">
+                    <li>Good OSH</li>
+                    <li>Membership</li>
+                </ul>
+            </li>
+            <li>Affordability, paying in instalments and international price differentiation</li>
+            <li>Understanding the importance of ethical behaviour</li>
+            <li>Understanding what constitutes CPD</li>
+            <li>Translation of the content (international members)</li>
+        </ul></div>
+        <div class="md:w-1/2 px-2">
+        <h4 class="mt-5 text-2xl font-bold">What we need from IOSH</h4>
+        <ul class="list-disc ml-5">
+            <li>Credibility / membership structure that reflects our competency</li>
+            <li>Products / services with a key focus around demonstrating professionalism</li>
+            <li>Resources, tools and support that are globally accessible</li>
+            <li>Networking opportunities at local, national and global level</li>
+            <li>Volunteering opportunities</li>
+        </ul>
+    </div>
+        </div>
+        </div>
+        <div class="screens screen-2 top-0 px-8 md:px-0 md:absolute" x-show="screen === 2" x-transition.duration.500ms>
+            <div class="flex flex-wrap md:mr-16">
+                <div id="target-audience" class="text-5xl font-bold mt-4 mb-8">
+                    <h1>Business</h1>
+                    <button @click="downloadSVG('#imagebox svg','chart.svg');">Download SVG</button>
+                </div>
+            
+                <div id="tagline" class="text-2xl mb-4 w-full">
+                    <p>"We need recognised products that evolve with the market"</p>
+                </div>
+            
+                <div id="needs-from-iosh" class="w-full">
+                    <p>Market leading product</p>
+                </div>
+            
+                <div id="who-we-are" class="md:w-1/2 px-2">
+                    <h2 class="mt-5 text-2xl font-bold">Who we are</h2>
+                    <ul class="list-disc ml-5">
+                        <li>Training providers / consultants, who sell IOSH product portfolio</li>
+                        <li>Businesses who provide training internally to their workforce ('House Accounts')</li>
+                    </ul>
+                </div>
+            
+                <div id="whats-important" class="md:w-1/2 px-2">
+                    <h2 class="mt-5 text-2xl font-bold">What's important to us</h2>
+                    <ul class="list-disc ml-5">
+                        <li>Providing our customers (=businesses) what they need</li>
+                        <li>Recognised product & standards</li>
+                        <li>How relevant products are to our customers</li>
+                        <li>Key account management arrangement</li>
+                        <li>Ease to do business / transact with</li>
+                        <li>Tailored solutions</li>
+                    </ul>
+                </div>
+            
+                <div id="challenges" class="md:w-1/2 px-2">
+                    <h2 class="mt-5 text-2xl font-bold">Challenges & pain points</h2>
+                    <ul class="list-disc ml-5">
+                        <li>Getting immediate response to our needs</li>
+                        <li>Reacting quickly to the changes (e.g., changes to OSH standards and legislation in each region, greater need for virtual learning)</li>
+                        <li>Ensuring the training standards are maintained</li>
+                        <li>Making sure the market does not lead to a competition prioritising low delivery price over quality</li>
+                    </ul>
+                </div>
+            
+                <div id="unmet-needs" class="md:w-1/2 px-2">
+                    <h2 class="mt-5 text-2xl font-bold">Unmet needs</h2>
+                    <p>Not utilising IOSH’s wider portfolio / not being able to see the link between IOSH’s full portfolio and our customers</p>
+                </div>
+            
+                <div id="needs-from-iosh" class="md:w-1/2 px-2">
+                    <h2 class="mt-5 text-2xl font-bold">What we need from IOSH</h2>
+                    <ul class="list-disc ml-5">
+                        <li>Recognised brand, products and standards</li>
+                        <li>Keeping up with changes in the market (e.g., legislation, technology) and updating products</li>
+                        <li>Products that are relevant to our customers</li>
+                        <li>IOSH listening to our needs through account management</li>
+                        <li>Creating new opportunities to expand training provider portfolio</li>
+                        <li>Easy online ordering and payments</li>
+                        <li>Regular and tailored communication</li>
+                        <li>Good customer service</li>
+                        <li>Narratives to describe why IOSH’s full portfolio will be ideal for us & our customers</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        <div class="screens screen-3 absolute top-0 px-8" x-show="screen === 3" x-transition.duration.500ms>
+            <h1 class="text-3xl font-bold">Training providers</h1>
+            <p class="mt-4">Testing 123</p>
+        </div>
+    </div>
+</div>
+<script>
+
+
+    /**
+     * Splits a string into an array of substrings, each with a maximum specified length, breaking on word boundaries.
+     *
+     * @param {string} inputString - The string to be split.
+     * @param {number} maxLength - The maximum length of each substring.
+     * @returns {string[]} An array of substrings.
+     * @throws {Error} If inputString is not a string or maxLength is not a positive number.
+     */
+     function splitStringByLength(inputString, maxLength) {
+        if (typeof inputString !== 'string' || typeof maxLength !== 'number' || maxLength <= 0) {
+            throw new Error('Invalid input: inputString must be a string and maxLength must be a positive number.');
+        }
+    
+        let result = [];
+        let words = inputString.split(' ');
+        let currentString = '';
+    
+        words.forEach(word => {
+            if ((currentString + word).length > maxLength) {
+                result.push(currentString.trim());
+                currentString = '';
+            }
+            currentString += word + ' ';
+        });
+    
+        if (currentString.trim().length > 0) {
+            result.push(currentString.trim());
+        }
+    
+        return result;
+    }
+    
+    /**
+     * Calculates the coordinates of a point on a circle given its center, radius, and angle in degrees.
+     *
+     * @param {number} cx - The x-coordinate of the circle's center.
+     * @param {number} cy - The y-coordinate of the circle's center.
+     * @param {number} r - The radius of the circle.
+     * @param {number} degrees - The angle in degrees from the positive x-axis to the point.
+     * @returns {Object} An object containing the x and y coordinates of the point.
+     */
+     function getCircleCoordinates(cx, cy, r, degrees) {
+        const radians = degrees * (Math.PI / 180);
+        const x = cx + r * Math.cos(radians);
+        const y = cy + r * Math.sin(radians);
+        return { x, y };
+    }
+    
+    /**
+     * Calculates new coordinates by moving a point from its original position by a specified distance at a given angle.
+     *
+     * @param {number} cx - The x-coordinate of the original position.
+     * @param {number} cy - The y-coordinate of the original position.
+     * @param {number} distance - The distance to move from the original position.
+     * @param {number} degrees - The angle in degrees from the positive x-axis to the direction of movement.
+     * @returns {Object} An object containing the new x and y coordinates.
+     */
+     function moveCoordinates(cx, cy, distance, degrees) {
+        const angleInRadians = degrees * (Math.PI / 180);
+        const newX = cx + distance * Math.cos(angleInRadians);
+        const newY = cy + distance * Math.sin(angleInRadians);
+        return { x: newX, y: newY };
+    }
+    
+    // Set up canvas and basic shape sizes
+    const canvasX = 700;
+    const canvasY = 700;
+    const centerX = 350;
+    const centerY = 350;
+    const radius = 250;
+    const core = 100;
+    
+    const draw = SVG().addTo('#imagebox').size(canvasX, canvasY);
+    draw.viewbox(0, 0, 700, 700);
+    draw.width("100%");
+    draw.height("100%");
+
+    /**
+ * Creates a slice of a circle with text along the arc.
+ *
+ * @param {number} centerX - The x-coordinate of the circle's center.
+ * @param {number} centerY - The y-coordinate of the circle's center.
+ * @param {number} radius - The radius of the circle.
+ * @param {number} core - The inner radius of the slice.
+ * @param {number} startDegrees - The starting angle of the slice in degrees.
+ * @param {number} endDegrees - The ending angle of the slice in degrees.
+ * @param {string} color - The fill color of the slice.
+ * @param {string} [name="name"] - The text to display along the arc.
+ * @param {string} [number="0"] - An optional number to associate with the slice.
+ * @param {number} [startRotation=0] - The starting rotation angle.
+ * @param {boolean} [numberDots=true] - Whether to display number dots.
+ * @param {number} [maxLength=15] - The maximum length of the text.
+ * @param {string} [cssClasses=""] - Additional CSS classes for the slice.
+ * @param {number} [textOffsetA=0] - Text offset for the first condition.
+ * @param {number} [textOffsetB=-20] - Text offset for the second condition.
+ * @returns {Object} A group containing the slice and the text path.
+ */
+function createSlice(centerX, centerY, radius, core, startDegrees, endDegrees, color, name = "name", number = "0", startRotation = 0, numberDots = true, maxLength = 15, cssClasses = "", textOffsetA = 0, textOffsetB = -20) {
+    const adjustedStartDegrees = startDegrees - 90;
+    const adjustedEndDegrees = endDegrees - 90;
+    const middleDegrees = (adjustedStartDegrees + adjustedEndDegrees) / 2;
+
+    const startCore = getCircleCoordinates(centerX, centerY, core, adjustedStartDegrees);
+    const startRadius = getCircleCoordinates(centerX, centerY, radius, adjustedStartDegrees);
+    const endRadius = getCircleCoordinates(centerX, centerY, radius, adjustedEndDegrees);
+    const endCore = getCircleCoordinates(centerX, centerY, core, adjustedEndDegrees);
+
+    const pathData = createPathData(startCore, startRadius, endRadius, endCore, radius, core);
+
+    const group = draw.group();
+    const path = draw.path(pathData).fill(color);
+    group.add(path);
+
+    const OutlinestartCore = getCircleCoordinates(centerX, centerY, core+3, adjustedStartDegrees +0.5);
+    const OutlinestartRadius = getCircleCoordinates(centerX, centerY, radius-3, adjustedStartDegrees+0.5);
+    const OutlineendRadius = getCircleCoordinates(centerX, centerY, radius-3, adjustedEndDegrees-0.5);
+    const OutlineendCore = getCircleCoordinates(centerX, centerY, core+3, adjustedEndDegrees-0.5);
+
+    const pathDataOutline = createPathData(OutlinestartCore, OutlinestartRadius, OutlineendRadius, OutlineendCore, radius -3, core +3);
+    const outlinePath = draw.path(pathDataOutline).attr({
+        'fill-opacity': 0,
+        'class': 'focus-outline'
+    });
+
+    group.add(outlinePath);
+
+    if (numberDots) {
+        addNumberDots(group, centerX, centerY, radius, middleDegrees, number, color);
+    }
+
+    addText(group, centerX, centerY, radius, adjustedStartDegrees, adjustedEndDegrees, middleDegrees, name, maxLength, textOffsetA, textOffsetB, cssClasses);
+    group.addClass('slice');
+    group.addClass(`slice-${number}`);
+    group.attr('focusable', 'true');
+    group.attr('tabindex', '0');
+    group.attr('x-on:click', `screen=${number}`);
+    group.attr('x-on:keyup.enter', `screen=${number}`);
+    return group;
+}
+
+function createPathData(startCore, startRadius, endRadius, endCore, radius, core) {
+    return `
+        M ${startCore.x} ${startCore.y}
+        L ${startRadius.x} ${startRadius.y}
+        A ${radius} ${radius} 0 0 1 ${endRadius.x} ${endRadius.y}
+        L ${endCore.x} ${endCore.y}
+        A ${core} ${core} 0 0 0 ${startCore.x} ${startCore.y}
+        z
+    `;
+}
+
+function addNumberDots(group, centerX, centerY, radius, middleDegrees, number, color) {
+    const numberText = draw.text(`${number}`).font({
+        family: 'Helvetica',
+        size: 18,
+        anchor: 'middle',
+        weight: 'bold',
+    });
+
+    const spot = draw.ellipse(40, 40).center(
+        moveCoordinates(centerX, centerY, radius - 100, middleDegrees).x,
+        moveCoordinates(centerX, centerY, radius - 100, middleDegrees).y
+    ).fill('white');
+
+    numberText.fill(color).center(
+        moveCoordinates(centerX, centerY, radius - 100, middleDegrees).x,
+        moveCoordinates(centerX, centerY, radius - 100, middleDegrees).y
+    );
+
+    numberText.rotate(middleDegrees + (middleDegrees < -20 || middleDegrees > 150 ? 90 : 270));
+
+    group.add(spot);
+    group.add(numberText);
+}
+
+function addText(group, centerX, centerY, radius, startDegrees, endDegrees, middleDegrees, name, maxLength, textOffsetA, textOffsetB, cssClasses) {
+    const text = draw.text((add) => {
+        splitStringByLength(name, maxLength).forEach((item) => {
+            add.tspan(item).newLine();
+        });
+    }).font({
+        family: 'Helvetica',
+        size: 12,
+        anchor: 'middle',
+        weight: 'bold',
+    });
+
+    const textPathData = createTextPathData(centerX, centerY, radius, startDegrees, endDegrees, middleDegrees, textOffsetA, textOffsetB);
+
+    const textPathGroup = draw.group();
+    textPathGroup.textPath(text, textPathData).font({
+        family: 'Helvetica',
+        size: 12,
+        anchor: 'middle',
+        weight: 'bold',
+        fill: 'white',
+        startOffset: '50%',
+    });
+
+    group.add(text);
+    group.addClass(cssClasses);
+}
+
+function createTextPathData(centerX, centerY, radius, startDegrees, endDegrees, middleDegrees, textOffsetA, textOffsetB) {
+    if (startDegrees < 0 || (middleDegrees > 180 && middleDegrees < 360)) {
+        const startCoords = getCircleCoordinates(centerX, centerY, radius + textOffsetA, startDegrees);
+        const endCoords = getCircleCoordinates(centerX, centerY, radius + textOffsetA, endDegrees);
+        return `
+            M ${startCoords.x} ${startCoords.y}
+            A ${radius + textOffsetA} ${radius + textOffsetA} 0 0 1 ${endCoords.x} ${endCoords.y}
+        `;
+    } else {
+        const startCoords = getCircleCoordinates(centerX, centerY, radius + textOffsetB, endDegrees);
+        const endCoords = getCircleCoordinates(centerX, centerY, radius + textOffsetB, startDegrees);
+        return `
+            M ${startCoords.x} ${startCoords.y}
+            A ${radius + textOffsetB} ${radius + textOffsetB} 0 0 0 ${endCoords.x} ${endCoords.y}
+        `;
+    }
+}
+
+function downloadSVG(svgId, filename) {
+            const svgElement = document.querySelector(svgId);
+            const serializer = new XMLSerializer();
+            const svgString = serializer.serializeToString(svgElement);
+            const blob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+
+            const downloadLink = document.createElement('a');
+            downloadLink.href = url;
+            downloadLink.download = filename;
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+            URL.revokeObjectURL(url);
+        }
+    
+    const slices = [
+        {
+            color: 'rgb(70, 33, 112)',
+            text: 'OSH professionals',
+            groupClass: 'section-1',
+            number: 1
+        },
+        {
+            color: '#2d58a6',
+            text: 'Business',
+            groupClass: 'section-1',
+            number: 2
+        },
+        {
+            color: 'rgb(70, 33, 112)',
+            text: 'Training providers',
+            groupClass: 'section-1',
+            number: 3
+        },
+        {
+            color:'#7363b0',
+            text: 'Volunteers',
+            groupClass: 'section-2',
+            number: 4
+        },
+        {
+            color:'#2d58a6',
+            text: 'Beneficiaries',
+            groupClass: 'section-2',
+            number: 5
+        },
+        {
+            color:  'rgb(70, 33, 112)',
+            text: 'Employer federations',
+            groupClass: 'section-2',
+            number: 6
+        },
+        {
+            color:'#2d58a6',
+            text: 'Other OSH entities',
+            groupClass: 'section-3',
+            number: 7
+        },
+        {
+            color:  '#7363b0',
+            text: 'Other OSH entities',
+            groupClass: 'section-3',
+            number: 8
+        },
+        {
+            color:  '#2d58a6',
+            text: 'Other OSH entities',
+            groupClass: 'section-3',
+            number: 9
+        },
+    ];
+
+    const slicesouter = [
+        {
+            color: 'green',
+            text: 'Group 1',
+            groupClass: 'section-1',
+            number: 9
+        },
+        {
+            color: 'red',
+            text: 'Group 2',
+            groupClass: 'section-2',
+            number: 10
+        },
+        {
+            color: 'blue',
+            text: 'Group 3',
+            groupClass: 'section-3',
+            number: 11
+        }
+    ];
+    
+    var slicegroup = draw.group();
+    var sliceoutergroup = draw.group();
+    
+    // Outers
+
+    slicesouter.map((item, index) => {
+        const numberofslices = slices.length;
+        const angle = (360/numberofslices) *3;
+        slicegroup.add(createSlice(centerX, centerY, radius+40, radius, angle*index, angle*(index+1), item.color, item.text , item.number, 0, false, 100, "slice-outer " + item.groupClass, -10, -35));
+    });
+
+        // Inner
+        slices.map((item, index) => {
+        const numberofslices = slices.length;
+        const angle = 360/numberofslices;
+        slicegroup.add(createSlice(centerX, centerY, radius, core, angle*index, angle*(index+1), item.color, item.text , index+1, 0, true , 15, "slice-inner " + item.groupClass, -5, -55));
+    });
+    slicegroup.addClass("slices")
+
+    </script>
+      <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+</html>
