@@ -5,9 +5,19 @@
   <meta name="viewport" content="width=device-width,shrink-to-fit=no,initial-scale=1,minimum-scale=1">
   <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://cdn.fonts.net">
+<link href="https://cdn.fonts.net/kit/f0abc26a-0ef7-408e-bd0e-bd3df3bdd746/f0abc26a-0ef7-408e-bd0e-bd3df3bdd746.css" rel="stylesheet" />
   <style>
    body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Frutiger55Roman', Arial, Helvetica, sans-serif;
+}
+
+.font-bold {
+    font-family: 'Frutiger65Bold', Arial, Helvetica, sans-serif;
+}
+
+.font-title {
+    font-family: 'Frutiger75Black', Arial, Helvetica, sans-serif;
 }
 
 .slice {
@@ -356,7 +366,7 @@ function createPathData(startCore, startRadius, endRadius, endCore, radius, core
 
 function addNumberDots(group, centerX, centerY, radius, middleDegrees, number, color) {
     const numberText = draw.text(`${number}`).font({
-        family: 'Helvetica',
+        family:  'Frutiger65Bold',
         size: 18,
         anchor: 'middle',
         weight: 'bold',
@@ -371,8 +381,10 @@ function addNumberDots(group, centerX, centerY, radius, middleDegrees, number, c
         moveCoordinates(centerX, centerY, radius - 100, middleDegrees).x,
         moveCoordinates(centerX, centerY, radius - 100, middleDegrees).y
     );
-
-    numberText.rotate(middleDegrees + (middleDegrees < -20 || middleDegrees > 150 ? 90 : 270));
+    const rotation = middleDegrees + (middleDegrees < 10 || middleDegrees > 180 ? 90 : 270);
+    console.log("middle:" + middleDegrees);
+    console.log("rotation:" + rotation);
+    numberText.rotate(rotation);
 
     group.add(spot);
     group.add(numberText);
@@ -384,7 +396,7 @@ function addText(group, centerX, centerY, radius, startDegrees, endDegrees, midd
             add.tspan(item).newLine();
         });
     }).font({
-        family: 'Helvetica',
+        family: 'Frutiger65Bold',
         size: 12,
         anchor: 'middle',
         weight: 'bold',
@@ -394,7 +406,7 @@ function addText(group, centerX, centerY, radius, startDegrees, endDegrees, midd
 
     const textPathGroup = draw.group();
     textPathGroup.textPath(text, textPathData).font({
-        family: 'Helvetica',
+        family: 'Frutiger65Bold',
         size: 12,
         anchor: 'middle',
         weight: 'bold',
@@ -407,7 +419,7 @@ function addText(group, centerX, centerY, radius, startDegrees, endDegrees, midd
 }
 
 function createTextPathData(centerX, centerY, radius, startDegrees, endDegrees, middleDegrees, textOffsetA, textOffsetB) {
-    if (startDegrees < 0 || (middleDegrees > 180 && middleDegrees < 360)) {
+    if (middleDegrees < 0 || (middleDegrees > 180 && middleDegrees < 360)) {
         const startCoords = getCircleCoordinates(centerX, centerY, radius + textOffsetA, startDegrees);
         const endCoords = getCircleCoordinates(centerX, centerY, radius + textOffsetA, endDegrees);
         return `
